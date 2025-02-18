@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.post("/shorten", async (req, res) => {
+app.post("/api/shorten", async (req, res) => {
   try {
     const { url } = req.body;
 
@@ -31,6 +31,3 @@ app.post("/shorten", async (req, res) => {
   }
 });
 
-app.listen(5713, '0.0.0.0', () => {
-  console.log('Server running on https://url-shorting-ashy.vercel.app/shorten');
-});
