@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+
+  --font-display: "Poppins", sans-serif;
+
+  --breakpoint-container: 1440px;
+
+  --color-cyan: hsl(180, 66%, 49%);
+  --color-violet: hsl(257, 27%, 26%);
+  --color-secondary: hsl(0, 87%, 67%);
+  --color-ngray: hsl(0, 0%, 75%);
+  --color-ngrayishvio: hsl(257, 7%, 63%);
+  --color-nblue: hsl(255, 11%, 22%);
+  --color-ndark: hsl(260, 8%, 14%);
+}
+
+body {
+  @apply font-display overflow-x-clip
+}
+
+h1 {
+  @apply text-nblue
+}
+
+button {
+  @apply bg-cyan hover:bg-cyan-200 text-white py-2 px-4 rounded-full cursor-pointer
+}
+
+button:disabled {
+  @apply bg-cyan-200
+}
+
+.hero {
+  background: url(./assets/images/bg-shorten-mobile.svg) no-repeat right top;
+  background-color: hsl(257, 27%, 26%);
+}
+
+.boost {
+  background: url(./assets/images/bg-boost-mobile.svg) no-repeat top right;
+  background-color: hsl(257, 27%, 26%);
+}
+
+.svg img:hover {
+  filter: invert(56%) sepia(75%) saturate(552%) hue-rotate(140deg) brightness(97%) contrast(101%);
+}
+
+@media screen and (min-width: 768px) {
+  .boost {
+    background: url(./assets/images/bg-boost-desktop.svg) no-repeat hsl(257, 27%, 26%);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .hero {
+    background-image: url(./assets/images/bg-shorten-desktop.svg);
+    background-position: center;
+    background-size: cover;
+  }
+}
