@@ -32,7 +32,7 @@ function Stats() {
     //fetch the data from the api which triggers useEffect to save in localStorage
     startTransition(async () => {
       try {
-        const response = await fetch("/api/shorten", {
+        const response = await fetch("/api/server", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ url: inputUrl }),
