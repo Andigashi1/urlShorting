@@ -32,7 +32,7 @@ function Stats() {
     //fetch the data from the api which triggers useEffect to save in localStorage
     startTransition(async () => {
       try {
-        const response = await fetch("http://localhost:5713/shorten", {
+        const response = await fetch("https://url-shorting-ashy.vercel.app/shorten", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ url: inputUrl }),

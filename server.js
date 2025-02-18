@@ -32,5 +32,5 @@ app.post("/shorten", async (req, res) => {
 });
 
 app.listen(5713, '0.0.0.0', () => {
-  console.log('Server running on http://localhost:5713');
+  console.log('Server running on https://url-shorting-ashy.vercel.app/shorten');
 });
